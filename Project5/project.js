@@ -50,3 +50,57 @@ const discountedPrice = book1.applyDiscount(10);
 book1.displayInfo();
 
 console.log(`Price after discount : ${discountedPrice}`)
+
+//--------------------------------------------------------------------------\\
+
+/**
+ * Task:
+Create a class called Car that represents a car. The class should have the following features:
+
+1 - A constructor that takes the following parameters:
+
+brand (string)
+model (string)
+year (number)
+price (number)
+
+2 - A method called displayDetails that prints:
+    Brand: [brand]
+    Model: [model]
+    Year: [year]
+    Price: $[price]
+
+3 - A method called calculateDepreciation that:
+
+    Takes the current year as a parameter.
+    Calculates the car’s depreciation assuming it loses 10% of its price every year.
+    Returns the depreciated price.
+ */
+
+class Car {
+    constructor(brand, model, year, price) {
+        this.brand = brand
+        this.model = model
+        this.year = year
+        this.price = price
+    }
+
+    displayDetails() {
+        console.log(`Brand: ${this.brand}`)
+        console.log(`Model: ${this.model}`)
+        console.log(`Year: ${this.year}`)
+        console.log(`Price: ${this.price}`)
+    }
+
+    calculateDepreciation(currentYear) {
+        const numberOfYears = currentYear - this.year
+        const depreciatedPrice = this.price * Math.pow(0.9, numberOfYears);
+        return depreciatedPrice;
+    }
+
+
+}
+const myCar = new Car("Tesla", "Model S", 2020, 80000)
+const depreciatedPrice = myCar.calculateDepreciation(2025)
+myCar.displayDetails();
+console.log(`Depreciated price in 2025: $${depreciatedPrice.toFixed(2)}`);
