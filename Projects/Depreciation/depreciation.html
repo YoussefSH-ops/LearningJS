@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Depreciation Calc</title>
+    <style>
+        body {
+          background: rgb(19, 132, 170);
+        }
+    
+      </style>
 </head>
 
 <body>
@@ -23,9 +29,11 @@
     <p></p>
     <button onclick="car()">Submit</button>
     <p id="carInfo"></p>
+    <p id="dp"></p>
 
 
     <script>
+        let Dp
     function car() {
         class Car {
     constructor(brand, model, year, price) {
@@ -33,6 +41,11 @@
         this.model = model
         this.year = year
         this.price = price
+    }
+    calculateDepreciation(currentYear) {
+        const numberOfYears = currentYear - year
+        const depreciatedPrice = this.price * Math.pow(0.9, numberOfYears);
+        document.getElementById('dp').innerText = `Price after depreciation: ${depreciatedPrice.toFixed(2)}`
     }
     
 }
@@ -44,7 +57,10 @@ let price = document.getElementById('price').value;
 const myCar = new Car(brand, model, year, price)
 
 
-document.getElementById('carInfo').innerText = ``
+
+document.getElementById('carInfo').innerText = `Your car is a ${brand}, ${model}, made on ${year}, with a price of $${price}`
+myCar.calculateDepreciation(2025)
+
     }
 
     </script>
