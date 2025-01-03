@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depreciation Calc</title>
+</head>
+
+<body>
+    <h1>Enter The Following Information</h1>
+    <label for="brand">Brand: </label>
+    <input type="text" id="brand" placeholder="Ex. Tesla">
+    <p></p>
+    <label for="model">Model: </label>
+    <input type="text" id="model" placeholder="Ex. Model S">
+    <p> </p>
+    <label for="year">Year: </label>
+    <input type="number" id="year" placeholder="Ex. 2010">
+    <p></p>
+    <label for="price">Price: </label>
+    <input type="number" id="price" placeholder="Ex. 80000">
+    <p></p>
+    <button onclick="car()">Submit</button>
+    <p id="carInfo"></p>
+
+
+    <script>
+    function car() {
+        class Car {
+    constructor(brand, model, year, price) {
+        this.brand = brand
+        this.model = model
+        this.year = year
+        this.price = price
+    }
+    
+}
+let brand = document.getElementById('brand').value;
+let model = document.getElementById('model').value;
+let year = document.getElementById('year').value;
+let price = document.getElementById('price').value;
+
+document.getElementById('carInfo').innerText = `Kele khara <3`
+    }
+
+    </script>
+</body>
+
+</html>
