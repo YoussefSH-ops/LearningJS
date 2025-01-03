@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Box Input Example</title>
+  <style>
+    body {
+      background: lightblue;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <h1>Enter Your Details</h1>
+  
+  <label for="number1">1st Number</label>
+  <input type="number" id="number1" placeholder="Enter any number">
+  <p>+</p> 
+  <label for="number2">2nd Number</label>
+  <input type="number" id="number2" placeholder="Enter any number">
+
+  <button onclick="calc()">Submit</button>
+  
+    
+
+  <p id="answer"></p>
+
+  <script>
+    function calc() {
+    let firstnum = document.getElementById('number1').value
+    let secondnum = document.getElementById('number2').value
+    let result = +firstnum + +secondnum
+    document.getElementById('answer').innerText = `The result is : ${result}`
+}
+  </script>
+</body>
+</html>
+

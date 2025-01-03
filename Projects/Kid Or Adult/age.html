@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kid or Adult</title>
+</head>
+
+<body>
+    <h1>Enter Your Age</h1>
+    <label for="age">Age: </label>
+    <input type="number" id="age" placeholder="Enter Your Age">
+
+    <button onclick="isOld()">Submit</button>
+    <p id="howOld"></p>
+
+
+    <script>
+        function isOld() {
+            let adultAge = 18
+            let age = document.getElementById('age').value
+            let tell = adultAge > age
+            let isKid = tell ? 'kid' : 'adult'
+            document.getElementById('howOld').innerText = `${isKid}`
+        }
+    </script>
+</body>
+
+</html>

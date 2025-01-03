@@ -109,3 +109,16 @@ console.log(countriesData.sort(function (a, b) {
 // .at
 // takes in a number an locates an element with the index
 console.log(listOfNames.at(2))
+
+// .pop
+// removes removes the final element from an array
+let myArr = [["Jay", 13], ["Ali", 17]]
+var removeFromMyArr = myArr.pop()
+console.log(removeFromMyArr)
+
+// .shift
+// removes removes the first element from an array
+let ourArr = [["Jay", 13], ["Ali", 17]]
+var removeFromOurArr= myArr.shift()
+console.log(removeFromOurArr)
+
