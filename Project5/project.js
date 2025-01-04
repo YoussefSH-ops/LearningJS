@@ -104,3 +104,51 @@ const myCar = new Car("Tesla", "Model S", 2020, 80000)
 const depreciatedPrice = myCar.calculateDepreciation(2025)
 myCar.displayDetails();
 console.log(`Depreciated price in 2025: $${depreciatedPrice.toFixed(2)}`);
+
+
+class Student {
+    constructor(name, age, grade) {
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
+    }
+    displayInfo() {
+        console.log(`Name: ${this.name}`)
+        console.log(`Age: ${this.age}`)
+        console.log(`Grades: ${this.grade}`)
+
+    }
+    calculateAverage() {
+
+        const sum = this.grade.reduce((a, b) => a + b, 0) 
+        let numberOfGrades = this.grade.length
+        let average = sum / numberOfGrades
+        return average
+    }
+}
+
+const student1 = new Student("John Doe", 16, [85, 90, 78, 92]);
+const averageGrade = student1.calculateAverage();
+student1.displayInfo();
+console.log(`Average Grade: ${averageGrade}`);
+
+/**
+ // reduce((a, b) => a + b, 0)
+ Accumulator (a): Keeps a running total (or result) as the function processes each element in the array.
+Current Value (b): Represents the current element being processed in the array.
+Initial Value (0): This is the starting value of the accumulator. Without it, the first element of the array is used as the initial value by default.
+
+Step 1:
+The reduce method starts by setting the accumulator (a) to 0 (the initial value) and the current value (b) to the first element of the array.
+
+Step 2:
+For each element in the array, it adds the current value (b) to the accumulator (a).
+
+Step 3:
+The result of each addition becomes the new value of the accumulator, and the process continues for every element in the array.
+
+reduce loops through the array and accumulates the total sum by adding each element to the running total (a).
+The initial value (0) ensures that the sum starts from zero.
+In this example, the total sum is 345, and the average is calculated as 86.25.
+
+ */
