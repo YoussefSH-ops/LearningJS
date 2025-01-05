@@ -34,3 +34,9 @@ tshirt.displayProduct(); // Method: The class has a method called displayProduct
 
 const total = boots.calculateTotal(salesTax)
 console.log(`Total price (with tax): $${total}`)
+
+// super = keyword is used in classes to call the constructer or
+//        access the properties and methods of a parent (superclasses)
+//        this = this object
+//        super = the parent
+
